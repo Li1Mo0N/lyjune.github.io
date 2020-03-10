@@ -6,17 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/LyJune/LyJune.github.io.git">
-  <title>JUNE</title>
+  <title>CSS3笔记（一） | JUNE</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="June’s Blog">
-<meta property="og:type" content="website">
-<meta property="og:title" content="JUNE">
-<meta property="og:url" content="https://github.com/LyJune/LyJune.github.io.git/index.html">
+  <meta name="description" content="CSS规则由两个主要的部分构成：选择器以及一条或多条声明一般写在&lt;html&gt;&lt;head&gt;&lt;style&gt;中">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS3笔记（一）">
+<meta property="og:url" content="https://github.com/LyJune/LyJune.github.io.git/2020/03/10/CSS3%E7%AC%94%E8%AE%B0(%E4%B8%80)/index.html">
 <meta property="og:site_name" content="JUNE">
-<meta property="og:description" content="June’s Blog">
+<meta property="og:description" content="CSS规则由两个主要的部分构成：选择器以及一条或多条声明一般写在&lt;html&gt;&lt;head&gt;&lt;style&gt;中">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-03-10T02:13:00.000Z">
+<meta property="article:modified_time" content="2020-03-10T02:39:06.412Z">
 <meta property="article:author" content="June">
-<meta property="article:tag" content="blog">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="CSS">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="JUNE" type="application/atom+xml">
@@ -145,16 +148,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-CSS3笔记(一)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-CSS3笔记(一)" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/10/CSS3%E7%AC%94%E8%AE%B0(%E4%B8%80)/">CSS3笔记（一）</a>
+    <h1 class="article-title" itemprop="name">
+      CSS3笔记（一）
     </h1>
   
 
@@ -168,9 +169,175 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="CSS规则"><a href="#CSS规则" class="headerlink" title="CSS规则"></a>CSS规则</h3><p>由两个主要的部分构成：选择器以及一条或多条声明<br>一般写在<code>&lt;html&gt;&lt;head&gt;&lt;style&gt;</code>中</p>
-        
-          <a class="article-more-a" href="/2020/03/10/CSS3%E7%AC%94%E8%AE%B0(%E4%B8%80)/#more">more >></a>
-        
+<a id="more"></a>
+<h3 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h3><p>格式:<br>选择器 ｛样式；｝</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>分类：基础选择器，复合选择器<br>基础选择器是由单个选择器组成的<br>基础选择器又分为：标签选择器，类选择器，id选择器，通配符选择器</p>
+<h4 id="标签选择器（元素选择器）"><a href="#标签选择器（元素选择器）" class="headerlink" title="标签选择器（元素选择器）"></a>标签选择器（元素选择器）</h4><p>指用HTML标签名称作为选择器</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>优点：能快速为页面中同类型的标签统一设置样式<br>缺点：不能设计差异化样式，只能选择全部的当前标签</p>
+<h4 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h4><p>可以差异化选择不同的标签，单独选一个或者某几个标签使用</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.red</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在要修改的标签里将class值设为对应的类<br><code>&lt;div class=&quot;red&quot;&gt;&lt;/div&gt;</code><br>多类名<br>class中可以写多个类名，类名之间用空格隔开<br><code>&lt;div class=&quot;lightskyblue font-35&quot;&gt;&lt;/div&gt;</code></p>
+<p>多类名的优点：<br>    1. 可以把一些标签元素相同的样式（共同的部分）放到一个类里面<br>    2. 这些标签都可以调用这个公共的类然后再调用自己独有的类<br>    3. 从而节省CSS代码统一修改也非常方便</p>
+<h4 id="id选择器"><a href="#id选择器" class="headerlink" title="id选择器"></a>id选择器</h4><p>可以为标有特定id的HTML元素指定特定的样式。<br>HTML元素以id属性来设置id选择器，CSS中id选择器以“#”来定义</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#pink</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>:  pink;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"pink"</span>&gt;</span>123<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>注意：id只能被使用一次</p>
+</blockquote>
+<h4 id="通配符选择器"><a href="#通配符选择器" class="headerlink" title="通配符选择器"></a>通配符选择器</h4><p>用“*”定义，表示选取页面中所有元素（标签）。</p>
+<h3 id="CSS字体属性"><a href="#CSS字体属性" class="headerlink" title="CSS字体属性"></a>CSS字体属性</h3><p>CSS Fonts（字体）属性用于定义字体系列、大小、粗细、和文字样式（如斜体）。</p>
+<h4 id="字体系列-font-family属性"><a href="#字体系列-font-family属性" class="headerlink" title="字体系列 font-family属性"></a>字体系列 font-family属性</h4><p>定义文本的字体系列。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font-family</span>: <span class="string">"Microsoft Yahei"</span>, Arial, Helvetica, sans-serif;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>各种字体之间必须使用英文状态下的逗号隔开<br>有空格隔开的多个单词组成的字体加引号</p>
+<h4 id="字体大小font-size属性"><a href="#字体大小font-size属性" class="headerlink" title="字体大小font-size属性"></a>字体大小font-size属性</h4><p>定义字体大小</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">20px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>标题标签比较特殊需要单独指定文字大小</p>
+<h4 id="字体粗细font-weight属性"><a href="#字体粗细font-weight属性" class="headerlink" title="字体粗细font-weight属性"></a>字体粗细font-weight属性</h4><p>设置文本字体的粗细</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>normal</td>
+<td>正常（400）</td>
+</tr>
+<tr>
+<td>bold</td>
+<td>粗体（700）</td>
+</tr>
+<tr>
+<td>bolder</td>
+<td>特粗体</td>
+</tr>
+<tr>
+<td>light</td>
+<td>细体</td>
+</tr>
+<tr>
+<td>number</td>
+<td>100-900</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>注意：数字后面不跟单位</p>
+</blockquote>
+<h4 id="文字样式font-style属性"><a href="#文字样式font-style属性" class="headerlink" title="文字样式font-style属性"></a>文字样式font-style属性</h4><p>设置文本风格</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>normal</td>
+<td>默认值</td>
+</tr>
+<tr>
+<td>italic</td>
+<td>斜体</td>
+</tr>
+</tbody></table>
+<p>一般用<code>&lt;em&gt;</code>标签来让文字倾斜</p>
+<h4 id="字体复合属性"><a href="#字体复合属性" class="headerlink" title="字体复合属性"></a>字体复合属性</h4><p>格式<br>font: font-styLe font-weight font-size/line-height font-family；</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">font</span><span class="selector-pseudo">:italic</span> 700 16<span class="selector-tag">px</span> "<span class="selector-tag">Microsoft</span> <span class="selector-tag">Yahei</span>";</span><br></pre></td></tr></table></figure>
+<p>使用font属性时，必须按上面语法格式中的顺序书写，不能更换顺序，并且各个属性间以空格隔开<br>不需要设置的属性可以省略（取默认值），但必须保留font-sie和font-family属性，否则font属性将不起作用</p>
+<h3 id="CSS文本属性"><a href="#CSS文本属性" class="headerlink" title="CSS文本属性"></a>CSS文本属性</h3><h4 id="文本颜色color属性"><a href="#文本颜色color属性" class="headerlink" title="文本颜色color属性"></a>文本颜色color属性</h4><p>用于定义文本颜色</p>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>预定义的颜色值</td>
+<td>red，green，blue等</td>
+</tr>
+<tr>
+<td>十六进制</td>
+<td>#FF0000,#FF6600;#2378D2等</td>
+</tr>
+<tr>
+<td>RGB代码</td>
+<td>rgb(255,0,0)或rgb(100%,0%,0%)</td>
+</tr>
+</tbody></table>
+<h4 id="对齐文本text-align属性"><a href="#对齐文本text-align属性" class="headerlink" title="对齐文本text-align属性"></a>对齐文本text-align属性</h4><p>用于设置元素内文本内容的水平对齐方式</p>
+<table>
+<thead>
+<tr>
+<th>value</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>left</td>
+<td>左对齐（默认值）</td>
+</tr>
+<tr>
+<td>right</td>
+<td>右对齐</td>
+</tr>
+<tr>
+<td>center</td>
+<td>居中</td>
+</tr>
+</tbody></table>
+<h4 id="装饰文本text-decoration属性"><a href="#装饰文本text-decoration属性" class="headerlink" title="装饰文本text-decoration属性"></a>装饰文本text-decoration属性</h4><p>规定添加到文本的修饰</p>
+<table>
+<thead>
+<tr>
+<th>value</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>none</td>
+<td>默认，没有装饰线</td>
+</tr>
+<tr>
+<td>underline</td>
+<td>下划线</td>
+</tr>
+<tr>
+<td>overline</td>
+<td>上划线</td>
+</tr>
+<tr>
+<td>line-through</td>
+<td>删除线</td>
+</tr>
+</tbody></table>
+<h4 id="文本缩进text-indent属性"><a href="#文本缩进text-indent属性" class="headerlink" title="文本缩进text-indent属性"></a>文本缩进text-indent属性</h4><p>用来指定文本的第一行缩进，通常是将段落的首行进行缩进</p>
+<table>
+<thead>
+<tr>
+<th>单位</th>
+<th>意义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>px</td>
+<td>像素</td>
+</tr>
+<tr>
+<td>em</td>
+<td>当前元素（font-size）1个文字的大小，如果当前元素没有设置大小，则会按照父元素的1个文字大小</td>
+</tr>
+</tbody></table>
+<h4 id="行间距line-height属性"><a href="#行间距line-height属性" class="headerlink" title="行间距line-height属性"></a>行间距line-height属性</h4><p>用于设置行间的距离（行高），可以控制文字行与行之间的距离<br>单位：px</p>
+<h3 id="CSS的引入方式"><a href="#CSS的引入方式" class="headerlink" title="CSS的引入方式"></a>CSS的引入方式</h3><p>按照CSS样式书写的位置（或者引入的方式），CSS样式表可以分为三大类<br>行内样式表（行内式），内部样式表（嵌入式），外部样式表（链接式）</p>
+<h4 id="内部样式表（内嵌样式表）"><a href="#内部样式表（内嵌样式表）" class="headerlink" title="内部样式表（内嵌样式表）"></a>内部样式表（内嵌样式表）</h4><p>写到html页面内部。<br>将所有的CSS代码抽取出来，单独放到一个<code>&lt;style&gt;</code>标签中<br><code>&lt;style&gt;</code>标签一般放在<code>&lt;head&gt;</code>标签中<br>通过此种方式，可以方便控空制当前整个页面中的元素样式设置<br>代码结构清晰，但是并没有实现结构与样式完全分离</p>
+<h4 id="行内样式表（内联样式表）"><a href="#行内样式表（内联样式表）" class="headerlink" title="行内样式表（内联样式表）"></a>行内样式表（内联样式表）</h4><p>在元素标签内部的stye属性中设定CSS样式。<br>适合于修改简单样式</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;h2 style="color: blue; font-weight: 400;"&gt;123das&lt;/h2&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="外部样式表"><a href="#外部样式表" class="headerlink" title="外部样式表"></a>外部样式表</h4><p>样式单独写到CSS文件中，之后把CSS文件引入到HTML页面中使用<br>适合于样式比较多的情况<br>用<code>&lt;link&gt;</code>标签引入HTML文件</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;link rel="stylesheet" href="style.css"&gt;</span><br></pre></td></tr></table></figure>
       
 
       
@@ -196,16 +363,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/10/CSS3%E7%AC%94%E8%AE%B0(%E4%B8%80)/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://github.com/LyJune/LyJune.github.io.git/2020/03/10/CSS3%E7%AC%94%E8%AE%B0(%E4%B8%80)/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2020/03/09/HTML5%E7%AC%94%E8%AE%B0(%E4%BA%8C)/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">HTML5笔记(二)</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -220,239 +446,32 @@
         </div>
         
         
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-HTML5笔记(二)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/09/HTML5%E7%AC%94%E8%AE%B0(%E4%BA%8C)/">HTML5笔记(二)</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/09/HTML5%E7%AC%94%E8%AE%B0(%E4%BA%8C)/" class="archive-article-date">
-  	<time datetime="2020-03-09T13:08:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <hr>
-<h3 id="表格标签（用于展示数据）"><a href="#表格标签（用于展示数据）" class="headerlink" title="表格标签（用于展示数据）"></a>表格标签（用于展示数据）</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">table</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">thead</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span> <span class="tag">&lt;<span class="name">th</span>&gt;</span>表头1<span class="tag">&lt;/<span class="name">th</span>&gt;</span> <span class="tag">&lt;<span class="name">th</span>&gt;</span>表头2<span class="tag">&lt;/<span class="name">th</span>&gt;</span> <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">thead</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">tbody</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span> <span class="tag">&lt;<span class="name">td</span>&gt;</span>单元格1<span class="tag">&lt;/<span class="name">td</span>&gt;</span> <span class="tag">&lt;<span class="name">td</span>&gt;</span>单元格1<span class="tag">&lt;/<span class="name">td</span>&gt;</span> <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">tr</span>&gt;</span> <span class="tag">&lt;<span class="name">td</span>&gt;</span>单元格3<span class="tag">&lt;/<span class="name">td</span>&gt;</span> <span class="tag">&lt;<span class="name">td</span>&gt;</span>单元格4<span class="tag">&lt;/<span class="name">td</span>&gt;</span> <span class="tag">&lt;/<span class="name">tr</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">tbody</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">table</span>&gt;</span></span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/03/09/HTML5%E7%AC%94%E8%AE%B0(%E4%BA%8C)/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/09/HTML5%E7%AC%94%E8%AE%B0(%E4%BA%8C)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS规则"><span class="toc-number">1.</span> <span class="toc-text">CSS规则</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#选择器"><span class="toc-number">2.</span> <span class="toc-text">选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#标签选择器（元素选择器）"><span class="toc-number">2.1.</span> <span class="toc-text">标签选择器（元素选择器）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#类选择器"><span class="toc-number">2.2.</span> <span class="toc-text">类选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#id选择器"><span class="toc-number">2.3.</span> <span class="toc-text">id选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#通配符选择器"><span class="toc-number">2.4.</span> <span class="toc-text">通配符选择器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS字体属性"><span class="toc-number">3.</span> <span class="toc-text">CSS字体属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#字体系列-font-family属性"><span class="toc-number">3.1.</span> <span class="toc-text">字体系列 font-family属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字体大小font-size属性"><span class="toc-number">3.2.</span> <span class="toc-text">字体大小font-size属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字体粗细font-weight属性"><span class="toc-number">3.3.</span> <span class="toc-text">字体粗细font-weight属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#文字样式font-style属性"><span class="toc-number">3.4.</span> <span class="toc-text">文字样式font-style属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#字体复合属性"><span class="toc-number">3.5.</span> <span class="toc-text">字体复合属性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS文本属性"><span class="toc-number">4.</span> <span class="toc-text">CSS文本属性</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#文本颜色color属性"><span class="toc-number">4.1.</span> <span class="toc-text">文本颜色color属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#对齐文本text-align属性"><span class="toc-number">4.2.</span> <span class="toc-text">对齐文本text-align属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#装饰文本text-decoration属性"><span class="toc-number">4.3.</span> <span class="toc-text">装饰文本text-decoration属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#文本缩进text-indent属性"><span class="toc-number">4.4.</span> <span class="toc-text">文本缩进text-indent属性</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#行间距line-height属性"><span class="toc-number">4.5.</span> <span class="toc-text">行间距line-height属性</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CSS的引入方式"><span class="toc-number">5.</span> <span class="toc-text">CSS的引入方式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#内部样式表（内嵌样式表）"><span class="toc-number">5.1.</span> <span class="toc-text">内部样式表（内嵌样式表）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#行内样式表（内联样式表）"><span class="toc-number">5.2.</span> <span class="toc-text">行内样式表（内联样式表）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#外部样式表"><span class="toc-number">5.3.</span> <span class="toc-text">外部样式表</span></a></li></ol></li></ol>
+                    </div>
+                </span>
             </div>
         </div>
         
-        
     </div>
 </aside>
 
 
 
-
   
-    <article id="post-HTML5笔记(一)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/09/HTML5%E7%AC%94%E8%AE%B0(%E4%B8%80)/">HTML5笔记(一)</a>
-    </h1>
   
 
-        
-        <a href="/2020/03/09/HTML5%E7%AC%94%E8%AE%B0(%E4%B8%80)/" class="archive-article-date">
-  	<time datetime="2020-03-09T12:28:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">html</span>&gt;</span>         <span class="comment">&lt;!-- 文档类型档声名标签 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span>        <span class="comment">&lt;!-- lang：语言种类；en（英语）zh-CN（中文）--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span>      <span class="comment">&lt;!-- charset：字符集；UTF-8：万国码 --&gt;</span></span><br></pre></td></tr></table></figure>
-        
-          <a class="article-more-a" href="/2020/03/09/HTML5%E7%AC%94%E8%AE%B0(%E4%B8%80)/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">前端</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">HTML</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/09/HTML5%E7%AC%94%E8%AE%B0(%E4%B8%80)/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/09/hello-world/">Hello World</a>
-    </h1>
   
 
-        
-        <a href="/2020/03/09/hello-world/" class="archive-article-date">
-  	<time datetime="2020-03-09T05:07:33.661Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-09</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-        
-          <a class="article-more-a" href="/2020/03/09/hello-world/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/09/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
+
   
 
 
@@ -475,8 +494,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
