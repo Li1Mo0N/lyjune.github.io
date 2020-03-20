@@ -16,7 +16,7 @@
 <meta property="og:description" content="Emmet语法快速生成HTML结构语法   实例 含义    div*10 快速生成10个div   ul&gt;li 父子级关系的标签   div+p 兄弟级关系的标签   p.one或p#one 生成带有类名或id的标签   .demo$ 生成有顺序的带类名的标签   div{内容（$）} 直接在标签里添加内容，可用使用自增符号$">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-03-10T13:48:33.000Z">
-<meta property="article:modified_time" content="2020-03-10T14:29:40.835Z">
+<meta property="article:modified_time" content="2020-03-10T14:49:26.699Z">
 <meta property="article:author" content="June">
 <meta property="article:tag" content="前端">
 <meta property="article:tag" content="CSS">
@@ -210,23 +210,23 @@
 </thead>
 <tbody><tr>
 <td>tac</td>
-<td><code>text-align: center</code>;</td>
+<td><code>text-align: center;</code></td>
 </tr>
 <tr>
 <td>ti2em</td>
-<td><code>text-indent: 2em</code>;</td>
+<td><code>text-indent: 2em;</code></td>
 </tr>
 <tr>
 <td>lh26px</td>
-<td><code>line-height: 26px</code>;</td>
+<td><code>line-height: 26px；</code></td>
 </tr>
 <tr>
 <td>tdn</td>
-<td><code>text-decoration: none</code>;</td>
+<td><code>text-decoration: none；</code></td>
 </tr>
 <tr>
 <td>w100</td>
-<td><code>width: 100px</code>;</td>
+<td><code>width: 100px；</code></td>
 </tr>
 </tbody></table>
 <h3 id="复合选择器"><a href="#复合选择器" class="headerlink" title="复合选择器"></a>复合选择器</h3><p>建立在基础选择器之上，对基本选择器进行组合形成的<br>常用的复合选择器：后代选择器、孑选择器、并集选择器、伪类选择器等</p>
@@ -269,7 +269,7 @@
 <h4 id="focus伪类选择器"><a href="#focus伪类选择器" class="headerlink" title=":focus伪类选择器"></a>:focus伪类选择器</h4><p>用于选取获得焦点的表单元素<br>焦点就是光标，一般<code>&lt;input&gt;</code>类表单元素才能获取，主要针对于表单元素</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">input</span><span class="selector-pseudo">:focus</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: lightyellow;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="CSS的元素显示模式"><a href="#CSS的元素显示模式" class="headerlink" title="CSS的元素显示模式"></a>CSS的元素显示模式</h3><p>HTML元素一般分为块元素和行内元素</p>
-<h4 id="块元素"><a href="#块元素" class="headerlink" title="块元素"></a>块元素</h4><p>常见的块元素有<code>&lt;h1&gt;</code>~<code>&lt;h6&gt;</code>、<code>&lt;p&gt;</code>、<code>&lt;div&gt;</code>、<code>&lt;ul&gt;</code>、<code>&lt;ol&gt;</code>、<code>&lt;li&gt;</code>等，其中<code>&lt;dⅳ&gt;</code>标签是最典型的块元素</p>
+<h4 id="块元素"><a href="#块元素" class="headerlink" title="块元素"></a>块元素</h4><p>常见的块元素有<code>&lt;h1&gt;</code>~<code>&lt;h6&gt;</code>、<code>&lt;p&gt;</code>、<code>&lt;div&gt;</code>、<code>&lt;ul&gt;</code>、<code>&lt;ol&gt;</code>、<code>&lt;li&gt;</code>等，其中<code>&lt;div&gt;</code>标签是最典型的块元素</p>
 <ul>
 <li>特点：</li>
 </ul>
@@ -280,7 +280,15 @@
 <li>是一个容器及盒子，里面可以放行内或者块级元素</li>
 </ol>
 <ul>
-<li>注意：<br>文字类的元素内不能使用块级元素<br><code>&lt;p&gt;</code>标签主要用于存放文字，因此<code>&lt;p&gt;</code>里不能放块级元素，特别是不能放<code>&lt;div&gt;</code><br>同理，<code>&lt;h1&gt;</code>~<code>&lt;h6&gt;</code>里也不能放其他块级元素<h4 id="行内元素"><a href="#行内元素" class="headerlink" title="行内元素"></a>行内元素</h4>常见的行内元素有<code>&lt;a&gt;</code>、<code>&lt;strong&gt;</code>、<code>&lt;b&gt;</code>、<code>&lt;em&gt;</code>、<code>&lt;i&gt;</code>、<code>&lt;de&gt;</code>、<code>&lt;s&gt;</code>、<code>&lt;ins&gt;</code>、<code>&lt;u&gt;</code>、<code>&lt;span&gt;</code>等，其中<code>&lt;span&gt;</code>标签是最典型的行内元素<br>有的地方也将行内元素称为内联元素</li>
+<li>注意：<ul>
+<li>文字类的元素内不能使用块级元素</li>
+<li><code>&lt;p&gt;</code>标签主要用于存放文字，因此<code>&lt;p&gt;</code>里不能放块级元素，特别是不能放<code>&lt;div&gt;</code></li>
+<li>同理，<code>&lt;h1&gt;</code>~<code>&lt;h6&gt;</code>里也不能放其他块级元素</li>
+</ul>
+</li>
+</ul>
+<h4 id="行内元素"><a href="#行内元素" class="headerlink" title="行内元素"></a>行内元素</h4><p>常见的行内元素有<code>&lt;a&gt;</code>、<code>&lt;strong&gt;</code>、<code>&lt;b&gt;</code>、<code>&lt;em&gt;</code>、<code>&lt;i&gt;</code>、<code>&lt;de&gt;</code>、<code>&lt;s&gt;</code>、<code>&lt;ins&gt;</code>、<code>&lt;u&gt;</code>、<code>&lt;span&gt;</code>等，其中<code>&lt;span&gt;</code>标签是最典型的行内元素<br>有的地方也将行内元素称为内联元素</p>
+<ul>
 <li>特点：</li>
 </ul>
 <ol>
@@ -290,7 +298,11 @@
 <li>行内元素只能容纳文本或其他行内元素</li>
 </ol>
 <ul>
-<li>注意：<br>链接里面不能再放链接<br>特殊情况链接<code>&lt;a&gt;</code>里面可以放块级元素，但是给<code>&lt;a&gt;</code>转换一下块级模式最安全</li>
+<li>注意：<ul>
+<li>链接里面不能再放链接</li>
+<li>特殊情况链接<code>&lt;a&gt;</code>里面可以放块级元素，但是给<code>&lt;a&gt;</code>转换一下块级模式最安全</li>
+</ul>
+</li>
 </ul>
 <h4 id="行内块元素"><a href="#行内块元素" class="headerlink" title="行内块元素"></a>行内块元素</h4><p>在行内元素中有几个特殊的标签：<code>&lt;img/&gt;</code>、<code>&lt;input/&gt;</code>、<code>&lt;td&gt;</code>，它们同时具有块元素和行内元素的特点</p>
 <ul>
@@ -465,6 +477,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2020/03/20/CSS3%E7%AC%94%E8%AE%B0(%E4%B8%89)/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          CSS3(三)
+        
+      </div>
+    </a>
   
   
     <a href="/2020/03/10/CSS3%E7%AC%94%E8%AE%B0(%E4%B8%80)/" id="article-nav-older" class="article-nav-link-wrap">
